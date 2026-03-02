@@ -50,20 +50,20 @@
     </section>
 
     <!-- toggle buttons section -->
-    <section id="toggle-buttons" class="flex gap-2">
+    <section id="toggle-buttons" class="flex gap-2 ">
         <!-- all-btn -->
         <div>
-            <button
+            <button onclick="currentState('all')" id="all"
                 class="text-[#64748B] py-2 px-3 flex justify-center items-center bg-[#FFFFFF] w-20  rounded-sm cursor-pointer border border-[#F1F2F4]">All</button>
         </div>
         <!-- Interview btn -->
         <div>
-            <button
+            <button  onclick="currentState('interview')" id="interview"
                 class="text-[#64748B] py-2 px-3 flex justify-center items-center bg-[#FFFFFF]  w-20  rounded-sm cursor-pointer border border-[#F1F2F4]">Interview</button>
         </div>
         <!-- Rejected btn -->
         <div>
-            <button
+            <button onclick="currentState('rejected')" id="rejected"
                 class="text-[#64748B] py-2 px-3  flex justify-center items-center bg-[#FFFFFF]  w-20  rounded-sm cursor-pointer border border-[#F1F2F4]">Rejected</button>
         </div>
     </section>
