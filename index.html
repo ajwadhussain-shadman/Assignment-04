@@ -10,39 +10,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <style>
-            *{
-           font-family: "Geist", sans-serif;
-            }
-        </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-[#F8FAFC] w-[80%] mx-auto">
+<body class="bg-[#F8FAFC] w-[80%] mx-auto mb-[60px]">
     <header class="mt-[60px] space-y-5">
         <h1 class=" text-[#002C5C] font-bold text-[32px] ">Job Application Tracker</h1>
         <!-- header cards -->
-         <div id="header-cards" class=" grid grid-cols-1 md:grid-cols-3 gap-[16px]">
+        <div id="header-cards" class=" grid grid-cols-1 md:grid-cols-3 gap-4">
 
-          <!-- total card -->
-           <div id="total-card " class="p-[20px] space-y-2 bg-[#FFFFFF] rounded-[8px] hover:shadow-md">
-             <h3 class="text-[#323B49] font-medium">Total</h3>
-            <p class="text-[#002C5C] font-bold text-2xl">8</p>
-           </div>
+            <!-- total card -->
+            <div id="total-card " class="p-5 space-y-2 bg-[#FFFFFF] rounded-lg shadow-md">
+                <h3 class="text-[#323B49] font-medium">Total</h3>
+                <p class="text-[#002C5C] font-bold text-2xl">8</p>
+            </div>
 
-           <!-- interview-card -->
-           <div id="interview-card" class="p-[20px] space-y-2 bg-[#FFFFFF] rounded-[8px] hover:shadow-md">
-             <h3 class="text-[#323B49] font-medium">Interview</h3>
-            <p class="text-[#10B981] font-bold text-2xl">0</p>
-           </div>
+            <!-- interview-card -->
+            <div id="interview-card" class="p-5 space-y-2 bg-[#FFFFFF] rounded-lg shadow-md">
+                <h3 class="text-[#323B49] font-medium">Interview</h3>
+                <p class="text-[#10B981] font-bold text-2xl">0</p>
+            </div>
 
-           <!-- rejected card -->
-           <div  id="rejected-card" class=" p-[20px] space-y-2 bg-[#FFFFFF] rounded-[8px] hover:shadow-md">
-             <h3 class="text-[#323B49] font-medium">Rejected</h3>
-            <p class="text-[#EF4444] font-bold text-2xl">0</p>
-           </div>
-         </div>
-         <hr class="border border-[#E6E7E9] my-8">
+            <!-- rejected card -->
+            <div id="rejected-card" class=" p-5 space-y-2 bg-[#FFFFFF] rounded-lg shadow-md">
+                <h3 class="text-[#323B49] font-medium">Rejected</h3>
+                <p class="text-[#EF4444] font-bold text-2xl">0</p>
+            </div>
+        </div>
+        <hr class="border border-[#E6E7E9] my-8">
     </header>
     <section id="avaliable-jobs" class="flex justify-between mb-6">
         <h3 class="font-semibold text-[20px] text-[#002C5C]">Available Jobs</h3>
@@ -50,8 +50,95 @@
     </section>
 
     <!-- toggle buttons section -->
-    <section id="toggle-buttons">
-        
+    <section id="toggle-buttons" class="flex gap-2">
+        <!-- all-btn -->
+        <div>
+            <button
+                class="text-[#64748B] py-2 px-3 flex justify-center items-center bg-[#FFFFFF] w-20  rounded-sm cursor-pointer border border-[#F1F2F4]">All</button>
+        </div>
+        <!-- Interview btn -->
+        <div>
+            <button
+                class="text-[#64748B] py-2 px-3 flex justify-center items-center bg-[#FFFFFF]  w-20  rounded-sm cursor-pointer border border-[#F1F2F4]">Interview</button>
+        </div>
+        <!-- Rejected btn -->
+        <div>
+            <button
+                class="text-[#64748B] py-2 px-3  flex justify-center items-center bg-[#FFFFFF]  w-20  rounded-sm cursor-pointer border border-[#F1F2F4]">Rejected</button>
+        </div>
     </section>
+
+    <!-- all section -->
+    <section class="">
+        <!--1st card -->
+        <div class="my-4 bg-[#FFFFFF] rounded-lg p-6 flex justify-between hover:shadow-lg hover:scale-101 duration-300">
+            <div class="left-side">
+                <h2 class="font-semibold text-[18px] text-[#002C5C]">Mobile First Corp</h2>
+                <p class="text-[#64748B]"> React Native Developer</p>
+                <p class="text-[#64748B] text-[14px] my-4">Remote
+                    •
+                    Full-time
+                    •
+                    $130,000 - $175,000</p>
+
+                <h2
+                    class="status-box text-[#002C5C] font-medium bg-[#EEF4FF] w-[113px] py-2 px-3 text-center rounded-sm ">
+                    Not Applied</h2>
+                <p class="text-[#323B49] my-2">Build cross-platform mobile applications using React Native. Work on
+                    products used by millions of users worldwide.</p>
+                <div class="mt-4">
+                    <button
+                        class="w-[100px] rounded-sm border border-[#10B981] py-2 px-3 text-center font-semibold  text-[#10B981] mr-1 hover:bg-green-600 hover:text-white cursor-pointer">Interview</button>
+                    <button
+                        class="w-[100px] rounded-sm border border-[#EF4444] py-2 px-3 text-center font-semibold  text-[#EF4444]  hover:bg-red-600 hover:text-white cursor-pointer">Rejected</button>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class=" w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center hover:bg-red-300 cursor-pointer">
+                    <i class="fa-regular fa-trash-can opacity-50"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd card -->
+        <div class="my-4 bg-[#FFFFFF] rounded-lg p-6 flex justify-between hover:shadow-lg hover:scale-101 duration-300">
+            <div class="left-side">
+                <h2 class="font-semibold text-[18px] text-[#002C5C]">WebFlow Agency</h2>
+                <p class="text-[#64748B]">Web Designer & Developer</p>
+                <p class="text-[#64748B] text-[14px] my-4">Los Angeles, CA
+                    •
+                    Part-time
+                    •
+                    $80,000 - $120,000</p>
+
+                <h2
+                    class="status-box text-[#002C5C] font-medium bg-[#EEF4FF] w-[113px] py-2 px-3 text-center rounded-sm ">
+                    Not Applied</h2>
+                <p class="text-[#323B49] my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                <div class="mt-4">
+                    <button
+                        class="w-[100px] rounded-sm border border-[#10B981] py-2 px-3 text-center font-semibold  text-[#10B981] mr-1  hover:bg-green-600 hover:text-white cursor-pointer">Interview</button>
+                    <button
+                        class="w-[100px] rounded-sm border border-[#EF4444] py-2 px-3 text-center font-semibold  text-[#EF4444]  hover:bg-red-600 hover:text-white cursor-pointer">Rejected</button>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class=" w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center hover:bg-red-300 cursor-pointer">
+                    <i class="fa-regular fa-trash-can opacity-50"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- no job section -->
+     <section class=" mt-4 py-[60px] px-10 bg-[#FFFFFF] rounded-lg ">
+        <div class="flex flex-col justify-center items-center">
+           <div class="mb-5"> <img src="./jobs.png" alt=""></div>
+            <h1 class="font-semibold text-2xl text-[#002C5C]">No jobs available</h1>
+            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+        </div>
+     </section>
+
+     <script src="./script.js"></script>
 </body>
+
 </html>
