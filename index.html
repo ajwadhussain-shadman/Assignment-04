@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-04</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <style>
+            *{
+           font-family: "Geist", sans-serif;
+            }
+        </style>
 </head>
-<body>
-    
+
+<body class="bg-[#F8FAFC] w-[80%] mx-auto">
+    <header class="mt-[60px] space-y-5">
+        <h1 class=" text-[#002C5C] font-bold text-[32px] ">Job Application Tracker</h1>
+        <!-- header cards -->
+         <div id="header-cards" class=" grid grid-cols-1 md:grid-cols-3 gap-[16px]">
+
+          <!-- total card -->
+           <div id="total-card " class="p-[20px] space-y-2 bg-[#FFFFFF] rounded-[8px] hover:shadow-md">
+             <h3 class="text-[#323B49] font-medium">Total</h3>
+            <p class="text-[#002C5C] font-bold text-2xl">8</p>
+           </div>
+
+           <!-- interview-card -->
+           <div id="interview-card" class="p-[20px] space-y-2 bg-[#FFFFFF] rounded-[8px] hover:shadow-md">
+             <h3 class="text-[#323B49] font-medium">Interview</h3>
+            <p class="text-[#10B981] font-bold text-2xl">0</p>
+           </div>
+
+           <!-- rejected card -->
+           <div  id="rejected-card" class=" p-[20px] space-y-2 bg-[#FFFFFF] rounded-[8px] hover:shadow-md">
+             <h3 class="text-[#323B49] font-medium">Rejected</h3>
+            <p class="text-[#EF4444] font-bold text-2xl">0</p>
+           </div>
+         </div>
+         <hr class="border border-[#E6E7E9] my-8">
+    </header>
+    <section id="avaliable-jobs" class="flex justify-between mb-6">
+        <h3 class="font-semibold text-[20px] text-[#002C5C]">Available Jobs</h3>
+        <p class="text-[#64748B] font-medium">8 jobs</p>
+    </section>
+
+    <!-- toggle buttons section -->
+    <section id="toggle-buttons">
+        
+    </section>
 </body>
 </html>
