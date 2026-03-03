@@ -5,6 +5,20 @@ const sections = {
    interviewSection: document.getElementById('interview-section'),
    rejectedSection: document.getElementById('rejected-section')
 };
+const nojobSection=document.getElementById('nojob-section');
+let currentJob=document.getElementById('current-job');
+function updateCurrentJob() {
+   if (cState === 'all') {
+      currentJob.innerText = sections.allSection.children.length
+         + sections.interviewSection.children.length
+         + sections.rejectedSection.children.length;
+   } else if (cState === 'interview') {
+      currentJob.innerText = sections.interviewSection.children.length;
+   } else if (cState === 'rejected') {
+      currentJob.innerText = sections.rejectedSection.children.length;
+   }
+}
+
 let cState = 'all';
 // button  toggling script
 
@@ -26,16 +40,31 @@ function currentState(id) {
 
    for (const section in sections) {
       sections[section].classList.add('hidden');
+      nojobSection.classList.add('hidden');
    }
    if (id === 'all') {
       sections.allSection.classList.remove('hidden');
+      if(sections.allSection.children.length <1){
+         nojobSection.classList.remove('hidden');
+      }
+      cState='all';
    }
    else if (id === 'interview') {
       sections.interviewSection.classList.remove('hidden');
+      if(sections.interviewSection.children.length <1){
+         nojobSection.classList.remove('hidden');
+      }
+      cState='interview';
    }
    else {
       sections.rejectedSection.classList.remove('hidden');
+       if(sections.rejectedSection.children.length <1){
+         nojobSection.classList.remove('hidden');
+      }
+        cState='rejected';
    }
+   count();
+   updateCurrentJob();
 }
 
 const totalJob=document.getElementById('total-job');
@@ -43,10 +72,9 @@ const interviewedJob=document.getElementById('interviewed-job');
 const rejectedJob=document.getElementById('rejected-job');
 
 function count(){
-   totalJob.innerText=sections.allSection.children.length;
+   totalJob.innerText=sections.allSection.children.length+sections.interviewSection.children.length+sections.rejectedSection.children.length;
 interviewedJob.innerText=sections.interviewSection.children.length;
 rejectedJob.innerText=sections.rejectedSection.children.length;
-
 }
 currentState('all');
 
@@ -66,6 +94,7 @@ for (const btn of buttons) {
          statusBox.innerText='Interview';
          card.classList.add('border-l-5','border-green-500');
          count();
+         updateCurrentJob();
       }
       else if(clickedBtn.classList.contains('rejected-btn')){
          sections.rejectedSection.appendChild(card);
@@ -74,10 +103,12 @@ for (const btn of buttons) {
          statusBox.innerText='Rejected';
          card.classList.add('border-l-5','border-red-500');
          count();
+           updateCurrentJob();
       }
       else if(clickedBtn.classList.contains('delete-btn')){
          card.remove();
          count();
+           updateCurrentJob();
       }
 
    })
