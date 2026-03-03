@@ -1,5 +1,4 @@
 
-
 const sections = {
    allSection: document.getElementById('all-section'),
    interviewSection: document.getElementById('interview-section'),
@@ -18,6 +17,7 @@ function updateCurrentJob() {
       currentJob.innerText = sections.rejectedSection.children.length;
    }
 }
+
 
 let cState = 'all';
 // button  toggling script
@@ -78,6 +78,7 @@ rejectedJob.innerText=sections.rejectedSection.children.length;
 }
 currentState('all');
 
+
 const buttons=document.querySelectorAll('.interview-btn,.rejected-btn,.delete-btn');
 for (const btn of buttons) {
    btn.addEventListener('click',function(event){
@@ -93,8 +94,7 @@ for (const btn of buttons) {
          statusBox.classList.add('border','border-green-600','bg-green-300','text-white');
          statusBox.innerText='Interview';
          card.classList.add('border-l-5','border-green-500');
-         count();
-         updateCurrentJob();
+        currentState(cState);
       }
       else if(clickedBtn.classList.contains('rejected-btn')){
          sections.rejectedSection.appendChild(card);
@@ -102,8 +102,7 @@ for (const btn of buttons) {
          statusBox.classList.add('border','border-red-600','bg-red-400','text-white');
          statusBox.innerText='Rejected';
          card.classList.add('border-l-5','border-red-500');
-         count();
-           updateCurrentJob();
+         currentState(cState);
       }
       else if(clickedBtn.classList.contains('delete-btn')){
          card.remove();
@@ -112,5 +111,6 @@ for (const btn of buttons) {
       }
 
    })
+
 }
 
