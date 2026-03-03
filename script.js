@@ -87,7 +87,7 @@ for (const btn of buttons) {
       const card=clickedBtn.closest('.card');
       const statusBox=card.querySelector('.status-box');
 
-      // console.log(card);
+      
       if(clickedBtn.classList.contains('interview-btn')){
          sections.interviewSection.appendChild(card);
          statusBox.classList.remove('text-[#002C5C]','bg-[#EEF4FF]');
@@ -106,8 +106,7 @@ for (const btn of buttons) {
       }
       else if(clickedBtn.classList.contains('delete-btn')){
          card.remove();
-         count();
-           updateCurrentJob();
+          currentState(cState);
       }
 
    })
