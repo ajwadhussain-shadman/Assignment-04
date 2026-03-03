@@ -27,19 +27,19 @@
             <!-- total card -->
             <div id="total-card " class="p-5 space-y-2 bg-[#FFFFFF] rounded-lg shadow-md">
                 <h3 class="text-[#323B49] font-medium">Total</h3>
-                <p class="text-[#002C5C] font-bold text-2xl">8</p>
+                <p id="total-job" class="text-[#002C5C] font-bold text-2xl">8</p>
             </div>
 
             <!-- interview-card -->
             <div id="interview-card" class="p-5 space-y-2 bg-[#FFFFFF] rounded-lg shadow-md">
                 <h3 class="text-[#323B49] font-medium">Interview</h3>
-                <p class="text-[#10B981] font-bold text-2xl">0</p>
+                <p id="interviewed-job" class="text-[#10B981] font-bold text-2xl">0</p>
             </div>
 
             <!-- rejected card -->
             <div id="rejected-card" class=" p-5 space-y-2 bg-[#FFFFFF] rounded-lg shadow-md">
                 <h3 class="text-[#323B49] font-medium">Rejected</h3>
-                <p class="text-[#EF4444] font-bold text-2xl">0</p>
+                <p id="rejected-job" class="text-[#EF4444] font-bold text-2xl">0</p>
             </div>
         </div>
         <hr class="border border-[#E6E7E9] my-8">
@@ -69,11 +69,11 @@
     </section>
 
     <!-- all section -->
-    <section class="">
+    <section id="all-section" class=" hidden">
         <!--1st card -->
-        <div class="my-4 bg-[#FFFFFF] rounded-lg p-6 flex justify-between hover:shadow-lg hover:scale-101 duration-300">
+        <div class=" card my-4 bg-[#FFFFFF] rounded-lg p-6 flex justify-between hover:shadow-lg hover:scale-101 duration-300">
             <div class="left-side">
-                <h2 class="font-semibold text-[18px] text-[#002C5C]">Mobile First Corp</h2>
+                <h2 class=" card-name font-semibold text-[18px] text-[#002C5C]">Mobile First Corp</h2>
                 <p class="text-[#64748B]"> React Native Developer</p>
                 <p class="text-[#64748B] text-[14px] my-4">Remote
                     •
@@ -82,27 +82,27 @@
                     $130,000 - $175,000</p>
 
                 <h2
-                    class="status-box text-[#002C5C] font-medium bg-[#EEF4FF] w-[113px] py-2 px-3 text-center rounded-sm ">
+                    class="status-box text-[#002C5C] font-medium bg-[#EEF4FF] w-[113px] py-2 px-3 text-center rounded-sm">
                     Not Applied</h2>
                 <p class="text-[#323B49] my-2">Build cross-platform mobile applications using React Native. Work on
                     products used by millions of users worldwide.</p>
                 <div class="mt-4">
                     <button
-                        class="w-[100px] rounded-sm border border-[#10B981] py-2 px-3 text-center font-semibold  text-[#10B981] mr-1 hover:bg-green-600 hover:text-white cursor-pointer">Interview</button>
+                        class="w-[100px] rounded-sm border border-[#10B981] py-2 px-3 text-center font-semibold  text-[#10B981] mr-1 hover:bg-green-600 hover:text-white cursor-pointer interview-btn">Interview</button>
                     <button
-                        class="w-[100px] rounded-sm border border-[#EF4444] py-2 px-3 text-center font-semibold  text-[#EF4444]  hover:bg-red-600 hover:text-white cursor-pointer">Rejected</button>
+                        class="w-[100px] rounded-sm border border-[#EF4444] py-2 px-3 text-center font-semibold  text-[#EF4444]  hover:bg-red-600 hover:text-white cursor-pointer rejected-btn">Rejected</button>
                 </div>
             </div>
             <div class="right-side">
-                <div class=" w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center hover:bg-red-300 cursor-pointer">
-                    <i class="fa-regular fa-trash-can opacity-50"></i>
+                <div class=" w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center hover:bg-red-300 cursor-pointer ">
+                    <i class="fa-regular fa-trash-can opacity-50 delete-btn"></i>
                 </div>
             </div>
         </div>
         <!-- 2nd card -->
-        <div class="my-4 bg-[#FFFFFF] rounded-lg p-6 flex justify-between hover:shadow-lg hover:scale-101 duration-300">
+        <div class=" card my-4 bg-[#FFFFFF] rounded-lg p-6 flex justify-between hover:shadow-lg hover:scale-101 duration-300">
             <div class="left-side">
-                <h2 class="font-semibold text-[18px] text-[#002C5C]">WebFlow Agency</h2>
+                <h2 class="card-name font-semibold text-[18px] text-[#002C5C]">WebFlow Agency</h2>
                 <p class="text-[#64748B]">Web Designer & Developer</p>
                 <p class="text-[#64748B] text-[14px] my-4">Los Angeles, CA
                     •
@@ -116,21 +116,26 @@
                 <p class="text-[#323B49] my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 <div class="mt-4">
                     <button
-                        class="w-[100px] rounded-sm border border-[#10B981] py-2 px-3 text-center font-semibold  text-[#10B981] mr-1  hover:bg-green-600 hover:text-white cursor-pointer">Interview</button>
+                        class="w-[100px] rounded-sm border border-[#10B981] py-2 px-3 text-center font-semibold  text-[#10B981] mr-1  hover:bg-green-600 hover:text-white cursor-pointer interview-btn">Interview</button>
                     <button
-                        class="w-[100px] rounded-sm border border-[#EF4444] py-2 px-3 text-center font-semibold  text-[#EF4444]  hover:bg-red-600 hover:text-white cursor-pointer">Rejected</button>
+                        class="w-[100px] rounded-sm border border-[#EF4444] py-2 px-3 text-center font-semibold  text-[#EF4444]  hover:bg-red-600 hover:text-white cursor-pointer rejected-btn">Rejected</button>
                 </div>
             </div>
             <div class="right-side">
-                <div class=" w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center hover:bg-red-300 cursor-pointer">
-                    <i class="fa-regular fa-trash-can opacity-50"></i>
+                <div class=" w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center hover:bg-red-300 cursor-pointer ">
+                    <i class="fa-regular fa-trash-can opacity-50 delete-btn"></i>
                 </div>
             </div>
         </div>
     </section>
+      
+    <!-- interview-section -->
+      <section id="interview-section"></section>
+      <!-- reject section -->
+    <section id="rejected-section"></section>
 
     <!-- no job section -->
-     <section class=" mt-4 py-[60px] px-10 bg-[#FFFFFF] rounded-lg ">
+     <section class=" mt-4 py-[60px] px-10 bg-[#FFFFFF] rounded-lg hidden ">
         <div class="flex flex-col justify-center items-center">
            <div class="mb-5"> <img src="./jobs.png" alt=""></div>
             <h1 class="font-semibold text-2xl text-[#002C5C]">No jobs available</h1>
